@@ -1,5 +1,5 @@
 # ARMOR
-$ARMOR_D$'s Implementation (under review at SIAM's SIMODS)
+$ARMOR$'s Implementation (under review at SIAM's SIMODS)
 
 # Usage
 - For benchmark experiments on CIFAR-10 (Section 3 in the paper), run:
