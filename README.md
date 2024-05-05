@@ -2,8 +2,10 @@
 ARMOR's Implementation
 
 # Usage
-- For benchmark experiments on CIFAR-10, simply run the following python files:
-  - 
+- For benchmark experiments on CIFAR-10, run:
+  - python armor_udr_cifar10.py for generalization of UDR with our $ARMOR_D$ method
+  - python armor_mart_cifar10.py for generalization of MART with our $ARMOR_D$ method
+  - python armor_trades_cifar10.py for generalization of TRADES with our $ARMOR_D$ method
 
 
 # Acknowldegements
