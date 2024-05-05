@@ -13,8 +13,9 @@ ARMOR's Implementation (under review at SIAM's SIMODS)
   - python armor_KL_worig_mnist.py for $ARMOR_{KL}$ ($adv_s+nat$)
 
 # Requirements
-
-For data preprocessing and common training operations, parts of the code is based on the following GitHub repositories:
+- Python 3.8.0
+- PyTorch 1.13.1
+- For data preprocessing and common training operations, parts of the code is based on the following GitHub repositories:
   - UDR: https://github.com/tuananhbui89/Unified-Distributional-Robustness (ICLR)
   - MART: https://github.com/YisenWang/MART (ICLR)
   - TRADES: https://github.com/yaodongyu/TRADES (ICML)
