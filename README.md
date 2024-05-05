@@ -12,9 +12,11 @@ ARMOR's Implementation (under review at SIAM's SIMODS)
   - python armor_KL_mnist.py for $ARMOR_{KL}$ ($adv_s$)
   - python armor_KL_worig_mnist.py for $ARMOR_{KL}$ ($adv_s+nat$)
 
-# Acknowldegements
-For data preprocessing and common training operations, the code leverages the following prior works:
-- https://github.com/tuananhbui89/Unified-Distributional-Robustness (ICLR 2022)
-- https://github.com/YisenWang/MART (ICLR2020)
+# Requirements
+
+For data preprocessing and common training operations, parts of the code is based on the following GitHub repositories:
+  - UDR: https://github.com/tuananhbui89/Unified-Distributional-Robustness (ICLR)
+  - MART: https://github.com/YisenWang/MART (ICLR)
+  - TRADES: https://github.com/yaodongyu/TRADES (ICML)
 
 
