@@ -11,8 +11,8 @@ $ARMOR_D$ Implementation (under review at SIAM's SIMODS)
   - python armor_mart_cifar10.py for generalization of MART with our $ARMOR_D$ method
   - python armor_trades_cifar10.py for generalization of TRADES with our $ARMOR_D$ method
 - For additional experiments on different variants of $ARMOR_D$ on with alpha, Renyi, and KL divergences on MNIST dataset, you can run:
-  - Renyi Divergence:
-    - python armor_Renyi_worig_mnist.py for $ARMOR_{R{\'e}n}$ ($adv_s$)
+  - Re{\'}nyi Divergence:
+    - python armor_Renyi_worig_mnist.py for $ARMOR_{Re{\'}n}$ ($adv_s$)
   - $\alpha-$ Divergence
     - python armor_f_mnist.py for $ARMOR_{\alpha}$ ($adv_s$)
     - python armor_f_worig_mnist.py for $ARMOR_{\alpha}$ ($adv_s+nat$)
