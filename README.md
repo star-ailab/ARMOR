@@ -1,8 +1,10 @@
 # ARMOR
 $ARMOR_D$ Implementation (under review at SIAM's SIMODS)
 
-# Usage
-- For benchmark experiments on CIFAR-10 (Section 3 in our paper), run:
+# Usage Examples
+- For benchmark experiments on CIFAR-100 run:
+  - python armor_udr_cifar100_kl_bisec.py for generalization of UDR with our $ARMOR_D$ method
+- For benchmark experiments on CIFAR-10 run:
   - python armor_udr_cifar10.py for generalization of UDR with our $ARMOR_D$ method
   - python armor_mart_cifar10.py for generalization of MART with our $ARMOR_D$ method
   - python armor_trades_cifar10.py for generalization of TRADES with our $ARMOR_D$ method
