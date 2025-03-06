@@ -49,13 +49,13 @@ class Flatten(nn.Module):
 
 ############# Attacks (Inner Maximizers)
 
-def fgsm(model, X, y, epsilon=0.3):
+def fgsm(model, X, y, epsilon=0.1):
     delta = torch.zeros_like(X, requires_grad=True)
     loss = nn.CrossEntropyLoss()(model(X + delta), y)
     loss.backward()
     return epsilon * delta.grad.detach().sign()
 
-def pgd_linf(model, X, y, epsilon=0.3, alpha=0.01, num_iter=40, randomize=False):
+def pgd_linf(model, X, y, epsilon=0.1, alpha=0.01, num_iter=40, randomize=False):
     if randomize:
         delta = torch.rand_like(X, requires_grad=True)
         delta.data = delta.data * 2 * epsilon - epsilon

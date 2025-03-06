@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader, TensorDataset
 import numpy as np 
 
 from resnet import *
-from utils_udr import transpose, cifar10
+from utils_udr import transpose, cifar100
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -165,18 +165,18 @@ def str2bool(v):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='ResNet',
-                        choices=['ResNet'])
+                        choices=['WideResNet', 'PreActResNet18', 'ResNet'])
     # parser.add_argument('--checkpoint', type=str, default='./model_test.pt')
-    parser.add_argument('--data', type=str, default='CIFAR10', choices=['CIFAR10', 'CIFAR100'],
+    parser.add_argument('--data', type=str, default='CIFAR100', choices=['CIFAR10', 'CIFAR100'],
                         help='Which dataset the eval is on')
     parser.add_argument('--preprocess', type=str, default='meanstd',
                         choices=['meanstd', '01', '+-1'], help='The preprocess for data')
     parser.add_argument('--norm', type=str, default='Linf', choices=['L2', 'Linf'])
-    parser.add_argument('--epsilon', type=float, default=8./255.)
-    parser.add_argument('--eta', type=float, default=2./255.)
+    parser.add_argument('--epsilon', type=float, default=0.01)
+    parser.add_argument('--eta', type=float, default=0.001)
     parser.add_argument('--num_steps', type=int, default=200) ##100
 
-    parser.add_argument('--n_ex', type=int, default=10000)
+    parser.add_argument('--n_ex', type=int, default=10000) ##10000
     
     parser.add_argument('--batch_size', type=int, default=200)
     parser.add_argument('--version', type=str, default='standard')
@@ -207,12 +207,11 @@ if __name__ == '__main__':
         raise ValueError('Please use valid parameters for normalization.')
 
     if args.model == 'ResNet':
-        net = ResNet18()
+        net = ResNet18(num_classes=num_classes)
     else:
         raise ValueError('Please use choose correct architectures.')
 
-    ##model_name = 'ds=cifar10_model={}_method={}'.format(args.model, 'baseline')
-    model_name = '1_cifar10_{}_{}'.format(args.model, '_armor_udr_noawp_ours')
+    model_name = 'ds_23=cifar100_model={}_method={}'.format(args.model, '_armor_udr_noawp_ours')
 
     logfile = os.path.join(model_name, f'log_result.txt')
 
@@ -232,7 +231,7 @@ if __name__ == '__main__':
 
     print('Load successfully, from model_name:', model_name)
     
-    dataset = cifar10('../cifar_data')
+    dataset = cifar100('../cifar_data')
     test_set = list(zip(transpose(dataset['test']['data']/255.), dataset['test']['labels']))
     test_loader = Batches(test_set, args.batch_size, shuffle=False, num_workers=1)
 

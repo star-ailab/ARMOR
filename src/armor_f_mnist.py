@@ -13,7 +13,7 @@ import random
 import numpy
 
 
-from utils.utils import load_parameters
+from utils import load_parameters
 
 mnist_train = datasets.MNIST("../data", train=True, download=True, transform=transforms.ToTensor())
 mnist_test = datasets.MNIST("../data", train=False, download=True, transform=transforms.ToTensor())
