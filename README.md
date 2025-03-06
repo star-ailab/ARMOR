@@ -17,7 +17,7 @@ $ARMOR_D$ Implementation (under review at SIAM's SIMODS)
   - $\alpha-$ Divergence
     - python armor_f_mnist.py for $ARMOR_{\alpha}$ ($adv_s$)
     - python armor_f_worig_mnist.py for $ARMOR_{\alpha}$ ($adv_s+nat$)
-  - $R\'{e}nyi-$ Divergence:
+  - $R{\'e}nyi-$ Divergence:
     - python armor_Renyi_worig_mnist.py for $ARMOR_{R\'{e}n}$ ($adv_s+nat$)
 
 
