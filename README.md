@@ -19,7 +19,8 @@ $ARMOR_D$ Implementation (under review at SIAM's SIMODS)
     - python armor_f_worig_mnist.py for $ARMOR_{\alpha}$ ($adv_s+nat$)
   - $R\'{e}nyi-$ Divergence:
     - python armor_Renyi_worig_mnist.py for $ARMOR_{R\'{e}n}$ ($adv_s+nat$)
-
+- For additional MNIST experiments without any adversarial training, you can run:
+  - 
 
 # Requirements
 - Python 3.8.0
