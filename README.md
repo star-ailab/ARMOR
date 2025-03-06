@@ -12,7 +12,7 @@ $ARMOR_D$ Implementation (under review at SIAM's SIMODS)
   - python armor_trades_cifar10.py for generalization of TRADES with our $ARMOR_D$ method
 
 - *Remark*: For UDR methods, after training is done, you can evaluate the robustified model by running:
-  - python eval_cifar10 and python eval_cifar100
+  - python eval_cifar100 and python eval_cifar10
     
 - For additional experiments without adversarial training (i.e., no defense mechanism), you can run:
   - python ce_cifar10.py and python ce_cifar100.py
